@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Box</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <button type="button" onclick="myFun()">Click</button>
+    <script>
+      function myFun() {
+        var txt;
+        var ashin = prompt("Ashin Indavudha - dhammavira.com", "Like");
+        if (ashin == null || ashin == "" || ashin != "Like") {
+          txt = "sorry";
+        } else {
+          txt = "Welcome to dhammavira.com (Paligrammar Website)";
+        }
+        document.getElementById("demo").innerHTML = txt;
+      }
+    </script>
+  </body>
+</html>

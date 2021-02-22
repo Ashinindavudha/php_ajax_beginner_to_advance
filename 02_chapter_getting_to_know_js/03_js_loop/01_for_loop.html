@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript for loop</title>
+    <script lang="javascript">
+      function display() {
+          var loopIndex;
+          var total = 0;
+          for (loopIndex = 1; loopIndex <= 100; loopIndex ++) {
+              total += loopIndex;
+          }
+          document.getElementById('targetDiv').innerHTML = "the total of 1 to 100 is " + total;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>using the for loop</h1>
+    <input type="button" name="" value="click here" onclick="display()" />
+    <div id="targetDiv"></div>
+  </body>
+</html>

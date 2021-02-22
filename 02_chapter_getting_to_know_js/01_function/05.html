@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passing data to function</title>
+    <script lang="javascript">
+      function display(message, elementID) {
+          document.getElementById(elementID).innerHTML = message;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>passing data to functions</h1>
+    <input
+      type="button"
+      onclick="display('You are seeing this thanks javascript', 'targetDiv')"
+      value="Click here"
+    />
+    <div id="targetDiv"></div>
+  </body>
+</html>

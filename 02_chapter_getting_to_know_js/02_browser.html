@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>what browser do you have?</title>
+    <script lang="javascript">
+      var begin, end
+      function display() {
+          if (navigator.appName == "Netscape") {
+              if (navigator.userAgent.indexOf("Firefox") > 0) {
+                  begin = navigator.userAgent.indexOf("Firefox") + "Firefox".length + 1;
+                  end = navigator.userAgent.length;
+                  document.getElementById("targetDiv").innerHTML = "You are using Firefox" + navigator.userAgent.substring(begin, end);
+              }
+          }
+          if (navigator.appName == "Microsoft Internet Explorer") {
+              begin = navigator.userAgent.indexOf("MSIE") + "MSIE".length;
+              if (navigator.userAgent.indexOf(";", begin) > 0) {
+                  end = navigator.userAgent.indexOf(";", begin);
+              } else {
+                  end =navigator.userAgent.indexOf(")", begin) + 2;
+              }
+              document.getElementById("targetDiv").innerHTML = "You are using Internet Explorer" + navigator.userAgent.substring(begin, end);
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>what browser do you have?</h1>
+    <h2>Determining browser type and version</h2>
+    <input type="button" onclick="display()" value="Click Here" />
+    <div id="targetDiv"></div>
+  </body>
+</html>

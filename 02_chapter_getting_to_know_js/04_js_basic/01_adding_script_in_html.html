@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adding script in html file</title>
+    <script>
+      var txt = "<br>welcome to my website<br><br> <br>";
+      function myFunc() {
+        document.getElementById("demo").innerHTML = txt;
+      }
+    </script>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <button type="button" onclick="myFunc()">Click Here</button>
+  </body>
+</html>

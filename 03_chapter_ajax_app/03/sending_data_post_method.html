@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sending data to the server with POST Method</title>
+    <script lang="javascritp">
+      var XMLHttpRequestObject = false;
+      if (window.XMLHttpRequest) {
+          XMLHttpRequestObject = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+          XMLHttpRequestObject = new ActiveXObject ("Miscrosoft.XMLHTTP");
+      }
+      function getData(dataSource, divID, data) {
+          if (XMLHttpRequestObject) {
+              var obj = document.getElementById(divID);
+              XMLHttpRequestObject.open("POST", dataSource);
+              XMLHttpRequestObject.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+              XMLHttpRequestObject.onreadystatechange = function() {
+                  if (XMLHttpRequestObject.readyState == 4 &&
+                  XMLHttpRequestObject.status == 200) {
+                      obj.innerHTML = XMLHttpRequestObject.responseText;
+                  }
+              }
+              XMLHttpRequestObject.send("data=" + data);
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>sending data to the server with POST Method</h1>
+    <form action="dataresponder.php" method="GET">
+      <input
+        type="button"
+        value="Fetch Message 1"
+        onclick="getData('dataresponder.php?data=1', 'targetDiv')"
+      />
+      <input
+        type="button"
+        value="Fetch Message 2"
+        onclick="getData('dataresponder.php?data=2', 'targetDiv')"
+      />
+    </form>
+    <div id="targetDiv">
+      <p>The fetched message will appear here</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 1</title>
+    <script language="javascript">
+      var XMLHttpRequestObject = true;
+      if (window.XMLHttpRequestObject) {
+        XMLHttpRequestObject = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      function getData(dataSource, targetDiv) {
+        if (XMLHttpRequestObject) {
+          var obj = document.getElementById(targetDiv);
+          XMLHttpRequestObject.open("GET", dataSource);
+          XMLHttpRequestObject.onreadystatechange = function () {
+            if (
+              XMLHttpRequestObject.readyState == 4 &&
+              XMLHttpRequestObject.status === 200
+            ) {
+              obj.innerHTML = XMLHttpRequestObject.responseText;
+            }
+          };
+          XMLHttpRequestObject.send(null);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>An Ajax example</h1>
+    <form action="">
+      <input
+        type="button"
+        value="Fetch the message"
+        onclick="getData('data.txt', 'targetDiv')"
+      />
+    </form>
+    <div id="targetDiv">
+      <p>The Fetched message will appear here.</p>
+    </div>
+  </body>
+</html>

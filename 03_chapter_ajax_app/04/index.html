@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Ajax with XML</title>
+    <script lang="javascript">
+      var colors;
+      var XMLHttpRequestObject = false;
+      if (window.XMLHttpRequest) {
+          XMLHttpRequestObject = new XMLHttpRequest();
+          XMLHttpRequestObject.overrideMimeType("text/xml");
+      } else if(window.ActiveXObject) {
+          XMLHttpRequestObject = new ActiveXObject("Miscrosoft.XMLHTTP");
+      }
+      function getData(dataSource, divID) {
+          if (XMLHttpRequestObject) {
+              XMLHttpRequestObject.open("GET", dataSource);
+              var obj = document.getElementById(divID);
+              XMLHttpRequestObject.onreadystatechange = function() {
+                  if (XMLHttpRequestObject.readyState == 4 &&
+                  XMLHttpRequestObject.status == 200) {
+                      var xmlDocument = XMLHttpRequestObject.responseXML;
+                      colors = document.getElementsByTagName("color");
+                      obj.innerHTML = xmlDocument.innerHTML + "Here are the fetched colors:<ul>";
+                          for (loopIndex = 0; loopIndex < colors.lenght; loopIndex++) {
+                              obj.innerHTML += "<li>" + colors[loopIndex].firstChild.data + "</li>";
+                          }
+                          obj.innerHTML += "</ul>";
+                  }
+              }
+              XMLHttpRequestObject.send(null);
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Using Ajax with XML</h1>
+    <form action="">
+      <input
+        type="button"
+        value="Fetch the Colors"
+        onclick="getData('./colors.xml', 'tagerDiv')"
+      />
+    </form>
+    <div id="targetDiv" width="100" height="100">
+      the list of colors will appear here.
+    </div>
+  </body>
+</html>

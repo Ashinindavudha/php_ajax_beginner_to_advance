@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using the While Loop</title>
+    <script lang="javascript">
+      function display() {
+          var loopIndex = 0, students = new Array(6);
+          students[0] = "Ashin";
+          students[1] = "Indavudha";
+          students[2] = "love";
+          students[3] = "liz";
+          students[4] = "cary";
+          students[5] = "Zack";
+          students[6] = "Nancy";
+          students[7] = "Ed";
+          while (students[loopIndex] != "Nancy" && loopIndex < students.length -1) {
+              loopIndex++;
+          }
+          if (loopIndex <= students.length - 1) {
+              document.getElementById('targetDiv').innerHTML = "I found Nancy at student location " + loopIndex;
+          } else {
+              document.getElementById('targetDiv').innerHTML = "I did not find Nancy.";
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Using the While Loop</h1>
+    <input type="button" onclick="display()" value="Click Here" />
+    <div id="targetDiv"></div>
+  </body>
+</html>

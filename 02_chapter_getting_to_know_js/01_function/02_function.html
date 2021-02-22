@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function target id</title>
+    <script lang="javascript">
+      function display() {
+          document.getElementById('targetDiv').innerHTML = "You Clicked the button";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>using javascript functions</h1>
+    <form action="">
+      <input type="button" onclick="display()" value="Click Here" />
+    </form>
+    <div id="targetDiv"></div>
+  </body>
+</html>
