@@ -2,7 +2,7 @@
 new WOW().init();
 //gobal
 var products = [];
-var cartItem = [];
+var cartItems = [];
 var cart_n = document.getElementById("cart_n");
 //divs
 var fruitDIV = document.getElementById("fruitDIV");
@@ -54,7 +54,7 @@ function HTMLfruitProduct(con) {
 <button type="button" onclick="cart('${FRUIT[con - 1].name}', '${
     FRUIT[con - 1].price
   }', '${URL}', '${con}', '${btn}')" class="btn btn-sm btn-ouline-secondary">
-<a href="#" style="color: inherit;">Add To Card</a>
+<a style="color: inherit;">Add To Card</a>
 </button>
 </div>
 <small class="text-muted">Free Shopping</small>
@@ -151,3 +151,85 @@ function animation() {
     title: "Added to Shopping Cart",
   });
 }
+//CART FUNCTIONS
+function cart(name, price, url, con, btncart) {
+  var item = {
+    name: name,
+    price: price,
+    url: url,
+  };
+  cartItems.push(item);
+  let storage = JSON.parse(localStorage.getItem("cart"));
+  if (storage == null) {
+    products.push(item);
+    localStorage.setItem("cart", JSON.stringify(products));
+  } else {
+    products = JSON.parse(localStorage.getItem("cart"));
+    products.push(item);
+    localStorage.setItem("cart", JSON.stringify(products));
+  }
+  product = JSON.parse(localStorage.getItem("cart"));
+  cart_n.innerHTML = `[${products.length}]`;
+  document.getElementById(btncart).style.display = "none";
+  animation();
+}
+function cart2(name, price, url, con, btncart) {
+  var item = {
+    name: name,
+    price: price,
+    url: url,
+  };
+  cartItems.push(item);
+  let storage = JSON.parse(localStorage.getItem("cart"));
+  if (storage == null) {
+    products.push(item);
+    localStorage.setItem("cart", JSON.stringify(products));
+  } else {
+    products = JSON.parse(localStorage.getItem("cart"));
+    products.push(item);
+    localStorage.setItem("cart", JSON.stringify(products));
+  }
+  product = JSON.parse(localStorage.getItem("cart"));
+  cart_n.innerHTML = `[${products.length}]`;
+  document.getElementById(btncart).style.display = "none";
+}
+//render
+function render() {
+  for (let index = 1; index < 6; index++) {
+    fruitDIV.innerHTML += `${HTMLfruitProduct(index)}`;
+  }
+  for (let index = 1; index < 3; index++) {
+    juiceDIV.innerHTML += `${HTMLjuiceProduct(index)}`;
+    saladDIV.innerHTML += `${HTMLsaladProduct(index)}`;
+  }
+  if (localStorage.getItem("cart") == null) {
+  } else {
+    products = JSON.parse(localStorage.getItem("cart"));
+    cart_n.innerHTML = `[${products.length}]`;
+  }
+}
+//login
+document.getElementById("formA").addEventListener("submit", (e) => {
+  e.preventDefault();
+  var userLogin = document.getElementById("usera");
+  var passLogin = document.getElementById("passworda");
+  if (userLogin.value == "ADMIN" && passLogin == "123") {
+    swal({
+      title: "Welcome",
+      html: "Access granted",
+      type: "success",
+    });
+    setTimeout(() => {
+      loadPage();
+    }, 300);
+  } else {
+    swal({
+      title: "Error",
+      html: "Access denied",
+      type: "error",
+    });
+  }
+  function loadPage() {
+    window.location.href = "./admin/admin.php";
+  }
+});
