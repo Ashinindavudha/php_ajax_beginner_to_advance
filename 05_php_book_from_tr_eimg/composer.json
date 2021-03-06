@@ -1,0 +1,19 @@
+{
+    "name": "super/05_php_book_from_tr_eimg",
+    "description": "This Project is Tutorial Lesson from Teacher Ei Maung \"eimg@fairwayweb.com\".",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ashinindavudha",
+            "email": "ashinindavudha2018@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Libs\\": "_classes/Libs/",
+            "Helpers\\": "_classes/Helpers/"
+        }
+    },
+    "require": {}
+}
