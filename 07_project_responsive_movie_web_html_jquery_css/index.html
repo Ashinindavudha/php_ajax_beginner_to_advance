@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Movie Website using HTML, CSS, and jQuery</title>
+    <link rel="stylesheet" href="css/lightslider.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- navigation start -->
+    <nav>
+        <!-- logo -->
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <!-- menu btn -->
+        <input type="checkbox" name="" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+        <!-- menu -->
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Hollywood</a></li>
+            <li><a href="#">Horror</a></li>
+        </ul>
+        <!-- Search -->
+        <div class="search">
+            <input type="text" placeholder="Find Your Favourite Movies">
+            <!-- search icon -->
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
+    <!-- navigation end -->
+    <!-- section start -->
+    <section id="main">
+        <!-- showcase -->
+        <!-- heading -->
+        <h1 class="showcase-heading">Showcase</h1>
+        <ul id="autoWidth" class="cs-hidden">
+            <!-- box 1 -->
+            <li class="item-a">
+                <!-- showcase box -->
+                <div class="showcase-box">
+                    <img src="img/s-1.jpg" alt="">
+                </div>
+            </li>
+            <!-- box 2 -->
+            <li class="item-b">
+                <!-- showcase box -->
+                <div class="showcase-box">
+                    <img src="img/s-2.jpg" alt="">
+                </div>
+            </li>
+            <!-- box 3 -->
+            <li class="item-c">
+                <!-- showcase box -->
+                <div class="showcase-box">
+                    <img src="img/s-3.jpg" alt="">
+                </div>
+            </li>
+            <!-- box 4 -->
+            <li class="item-d">
+                <!-- showcase box -->
+                <div class="showcase-box">
+                    <img src="img/s-4.jpg" alt="">
+                </div>
+            </li>
+            <!-- box 5 -->
+            <li class="item-e">
+                <!-- showcase box -->
+                <div class="showcase-box">
+                    <img src="img/s-5.png" alt="">
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- section 1 end -->
+    <!-- section 2 start -->
+    <!-- latest-movies -->
+    <section id="latest">
+        <h2 class="latest-heading">Latest Movies</h2>
+        <!-- slider -->
+        <ul id="autoWidth2" class="cs-hidden">
+            <!-- slide-box-1 -->
+            <li class="item-a">
+                <!-- img -->
+                <div class="latest-b-img">
+                    <img src="img/m-1.jpg" alt="">
+                </div>
+                <div class="latest-b-text">
+                    <strong>King 2018</strong>
+                    <p>Action Movie</p>
+                </div>
+            </li>
+            <!-- slide-box-2 -->
+            <li class="item-b">
+                <!-- img -->
+                <div class="latest-b-img">
+                    <img src="img/m-2.jpg" alt="">
+                </div>
+                <div class="latest-b-text">
+                    <strong>King 2018</strong>
+                    <p>Action Movie</p>
+                </div>
+            </li>
+            <!-- slide-box-3 -->
+            <li class="item-c">
+                <!-- img -->
+                <div class="latest-b-img">
+                    <img src="img/m-3.jpg" alt="">
+                </div>
+                <div class="latest-b-text">
+                    <strong>King 2018</strong>
+                    <p>Action Movie</p>
+                </div>
+            </li>
+            <!-- slide-box-4 -->
+            <li class="item-d">
+                <!-- img -->
+                <div class="latest-b-img">
+                    <img src="img/m-4.jpg" alt="">
+                </div>
+                <div class="latest-b-text">
+                    <strong>King 2018</strong>
+                    <p>Action Movie</p>
+                </div>
+            </li>
+            <!-- slide-box-5 -->
+            <li class="item-e">
+                <!-- img -->
+                <div class="latest-b-img">
+                    <img src="img/m-5.jpg" alt="">
+                </div>
+                <div class="latest-b-text">
+                    <strong>King 2018</strong>
+                    <p>Action Movie</p>
+                </div>
+            </li>
+            <!-- slide-box-6 -->
+            <li class="item-f">
+                <!-- img -->
+                <div class="latest-b-img">
+                    <img src="img/m-6.jpg" alt="">
+                </div>
+                <div class="latest-b-text">
+                    <strong>King 2018</strong>
+                    <p>Action Movie</p>
+                </div>
+            </li>
+            <!-- slide-box-7 -->
+            <li class="item-g">
+                <!-- img -->
+                <div class="latest-b-img">
+                    <img src="img/m-7.jpg" alt="">
+                </div>
+                <div class="latest-b-text">
+                    <strong>King 2018</strong>
+                    <p>Action Movie</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- section 2 end -->
+    <!-- movies  -->
+    <div class="movies-heading">
+        <h2>Movies</h2>
+    </div>
+    <!-- section 3 -->
+    <section id="movies-list">
+        <!-- box 1 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-1.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet
+                omnis sunt.
+            </a>
+        </div>
+        <!-- box 2 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-2.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita
+                facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet omnis
+                sunt.
+            </a>
+        </div>
+        <!-- box 2 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-2.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita
+                facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet omnis
+                sunt.
+            </a>
+        </div>
+        <!-- box 3 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-3.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita
+                facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet omnis
+                sunt.
+            </a>
+        </div>
+        <!-- box 4 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-4.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita
+                facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet omnis
+                sunt.
+            </a>
+        </div>
+        <!-- box 5 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-5.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita
+                facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet omnis
+                sunt.
+            </a>
+        </div>
+        <!-- box 6 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-6.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita
+                facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet omnis
+                sunt.
+            </a>
+        </div>
+        <!-- box 7 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-7.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita
+                facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet omnis
+                sunt.
+            </a>
+        </div>
+        <!-- box 8 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="movies-img">
+                <div class="quality">HDRip</div>
+                <img src="img/l-8.jpg" alt="">
+            </div>
+            <!-- text -->
+            <a href="#">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, officia assumenda, nihil ab eius
+                expedita
+                facere quia molestias excepturi ea delectus. Facilis quo quibusdam ducimus esse fugit eveniet omnis
+                sunt.
+            </a>
+        </div>
+    </section>
+    <!-- section 3 end -->
+    <!-- btns -->
+    <div class="btns">
+        <a href="#">Previous</a>
+        <a href="#">Next</a>
+    </div>
+    <footer>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ullam facilis porro aspernatur vero nisi sed!
+            Voluptatibus commodi ab numquam.</p>
+        <p>Copyright 2021 - Going to Internet</p>
+    </footer>
+
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#autoWidth, #autoWidth2').lightSlider({
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#autoWidth, #autoWidth2').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
